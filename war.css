@@ -1,0 +1,14 @@
+body{
+    background: url(war.jfif)no-repeat center fixed;
+    background-size: cover;
+    color: white;
+}
+td{
+    font-weight: bold
+}
+table{
+    border-collapse: collapse;
+    border: 3px solid black;
+    text-align: center;
+    color: #ffff00;
+}

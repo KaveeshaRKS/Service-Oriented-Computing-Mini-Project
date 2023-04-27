@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Butterfly Bootstrap Template - Index</title>
+  <title>Portfolio Details - Butterfly Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -35,51 +35,23 @@
 </head>
 
 <body>
-   <?php
-   
-   if(isset($_GET['c'])){
-       $c=$_GET['c'];
-   }else{
-       $c="lk";
-   }
-   
-   $url="https://restcountries.com/v3.1/alpha/$c";
-   
-   $data= json_decode(file_get_contents($url), true);
-   
-   
-   $flags=$data[0]["flags"]["png"];
-   $official_name=$data[0]["name"]["official"];
-   $curr=$data[0]["currencies"];
-   foreach ($curr as $key=>$value){
-      
-       break;
-   }
-   $currency=$data[0]["currencies"][$key]["name"];
-   $capital=$data[0]["capital"][0];
-   $region=$data[0]["region"];
-   $sub_region=$data[0]["subregion"];
-   $i=count($data[0]["borders"]);
-   $area=$data[0]["area"];
-   $population=$data[0]["population"];
-   
-   ?> 
+
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="index.php" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
-       
-       <h1 class="logo"><a href="index.php"></a></h1> 
+      <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+      <!-- Uncomment below if you prefer to use text as a logo -->
+      <!-- <h1 class="logo"><a href="index.html">Butterfly</a></h1> -->
 
       <nav id="navbar" class="navbar">
         <ul>
-            <li><a class="nav-link scrollto active" href="losses.php">LOSSES.PHP</a></li>
-          <li><a class="nav-link scrollto" href="#about"></a></li>
-          <li><a class="nav-link scrollto" href="#services"></a></li>
-          <li><a class="nav-link scrollto " href="#portfolio"></a></li>
-          <li><a class="nav-link scrollto" href="#team"></a></li>
-          <li class="dropdown"><a href="#"><span></span> <i class=""></i></a>
+          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto active" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -96,141 +68,80 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact"></a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>  
+      </nav><!-- .navbar -->
 
     </div>
-  </header> End Header 
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1><?php echo $official_name ?></h1>
-          
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img">
-            
-          <img src="<?php echo $flags ?>" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
-
-  </section><!-- End Hero -->
+  </header><!-- End Header -->
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
-        <div class="row">
-          
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Portfolio Details</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Portfolio Details</li>
+          </ol>
+        </div>
 
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-1.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-2.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-3.jpg" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Client</strong>: ASU Company</li>
+                <li><strong>Project date</strong>: 01 March, 2020</li>
+                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>This is an example of portfolio detail</h2>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p>
+            </div>
+          </div>
 
         </div>
 
       </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
-      <div class="container">
-
-        
-
-        
-
-      </div>
-    </section><!-- End Counts Section -->
-
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-      <div class="container">
-
-        
-
-      </div>
-    </section><!-- End Clients Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container">
-
-        <div class="section-title">
-         
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-cash-stack" style="color: #ff689b;"></i></div>
-              <h4 class="title"><a href="">Capital City</a></h4>
-              <p class="description"><?php echo $capital ?></p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-calendar4-week" style="color: #e9bf06;"></i></div>
-              <h4 class="title"><a href="">Region & Sub-Region</a></h4>
-              <p class="description"><?php echo $region ." & ". $sub_region ?></p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-wow-delay="0.1s">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-chat-text" style="color: #3fcdc7;"></i></div>
-              <h4 class="title"><a href="">Currency</a></h4>
-              <p class="description"><?php echo $currency ?></p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-wow-delay="0.1s">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-credit-card-2-front" style="color:#41cf2e;"></i></div>
-              <h4 class="title"><a href="">Borders</a></h4>
-              <p class="description"><?php for($x=0; $x<$i; $x++){
-      echo $data[0]["borders"][$x]." ";
-   } ?></p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-globe" style="color: #d6ff22;"></i></div>
-              <h4 class="title"><a href="">Area</a></h4>
-              <p class="description"><?php echo $area ?></p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-clock" style="color: #4680ff;"></i></div>
-              <h4 class="title"><a href="">Population</a></h4>
-              <p class="description"><?php echo $population ?></p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-
-
-    <!-- ======= Testimonials Section ======= -->
-
-
-    <!-- ======= Team Section ======= -->
-
-
-    <!-- ======= Gallery Section ======= -->
-
-
-    <!-- ======= Contact Section ======= -->
-   
+    </section><!-- End Portfolio Details Section -->
 
   </main><!-- End #main -->
 
@@ -266,7 +177,16 @@
             </p>
           </div>
 
-          
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
